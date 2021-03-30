@@ -7,7 +7,12 @@
 //
 
 @testable import Adyen
+#if canImport(AdyenActions)
 @testable import AdyenActions
+#endif
+#if canImport(AdyenCard)
+@testable import AdyenCard
+#endif
 import XCTest
 
 class AssetsAccessTests: XCTestCase {
@@ -19,5 +24,10 @@ class AssetsAccessTests: XCTestCase {
     func testActionResourcesAccess() throws {
         XCTAssertNotNil(UIImage(named: "mbway", in: Bundle.actionsInternalResources, compatibleWith: nil))
         XCTAssertNotNil(UIImage(named: "blik", in: Bundle.actionsInternalResources, compatibleWith: nil))
+    }
+
+    func testCardResourcesAccess() throws {
+        XCTAssertNotNil(UIImage(named: "ic_card_back", in: Bundle.cardInternalResources, compatibleWith: nil))
+        XCTAssertNotNil(UIImage(named: "ic_card_front", in: Bundle.cardInternalResources, compatibleWith: nil))
     }
 }

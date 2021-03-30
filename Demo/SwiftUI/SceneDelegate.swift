@@ -1,10 +1,12 @@
 //
-// Copyright (c) 2020 Adyen N.V.
+// Copyright (c) 2021 Adyen N.V.
 //
 // This file is open source and available under the MIT license. See the LICENSE file for more info.
 //
 
-import AdyenActions
+#if canImport(AdyenActions)
+    import AdyenActions
+#endif
 import SwiftUI
 import UIKit
 
