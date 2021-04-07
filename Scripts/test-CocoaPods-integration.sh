@@ -25,10 +25,12 @@ targets:
     type: bundle.ui-testing
     platform: iOS
     sources: UITests
+    dependency: $PROJECT_NAME
   UnitTests:
     type: bundle.unit-test
     platform: iOS
     sources: UnitTests
+    dependency: $PROJECT_NAME
 schemes:
   App:
     build:
@@ -67,11 +69,9 @@ target '$PROJECT_NAME' do
   pod 'Adyen/SwiftUI', :path => '../'
 
   target 'UnitTests' do
-        inherit! :search_paths
   end
 
   target 'UITests' do
-        inherit! :search_paths
   end
 end
 " >> Podfile
