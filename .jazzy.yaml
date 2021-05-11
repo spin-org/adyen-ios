@@ -11,16 +11,78 @@ skip_undocumented: false
 hide_documentation_coverage: true
 
 custom_categories:
+  
   - name: Drop In Component
     children:
       - DropInComponent
       - DropInComponentDelegate
+      
+  - name: Payment Methods
+    children:
+      - PaymentMethod
+      - PaymentMethods
+      - StoredPaymentMethod
+      - StoredCardPaymentMethod
+      - StoredBCMCPaymentMethod
+      - StoredPayPalPaymentMethod
+      - StoredBLIKPaymentMethod
+      - AnyCardPaymentMethod
+      - CardPaymentMethod
+      - BCMCPaymentMethod
+      - IssuerListPaymentMethod
+      - ApplePayPaymentMethod
+      - SEPADirectDebitPaymentMethod
+      - QiwiWalletPaymentMethod
+      - AwaitPaymentMethod
+      - MBWayPaymentMethod
+      - BLIKPaymentMethod
+      - VoucherPaymentMethod
+      - DokuPaymentMethod
+      - EContextATMPaymentMethod
+      - SevenElevenPaymentMethod
+      - EContextStoresPaymentMethod
+      - EContextOnlinePaymentMethod
+      - QRCodePaymentMethod
+      - WeChatPayPaymentMethod
+      
+  - name: Actions
+    children:
+      - Action
+      - AdyenActionComponent
+      - ActionComponentData
+      - ActionComponentDelegate
+      - RedirectAction
+      - RedirectComponent
+      - ThreeDS2Action
+      - ThreeDS2FingerprintAction
+      - ThreeDS2ChallengeAction
+      - AwaitAction
+      - AwaitComponent
+      - GenericVoucherAction
+      - VoucherComponent
+      - VoucherAction
+      - QRCodeAction
+      - QRCodeComponent
+      - SDKAction
+      - WeChatPaySDKActionComponent
+      - WeChatPaySDKAction
+      
+  - name: 3D Secure 2 Component
+    children:
+      - ThreeDS2Component
+      - ThreeDS2ComponentError
+      - ThreeDS2Details
+      - ThreeDS2Action
+      - ThreeDS2FingerprintAction
+      - ThreeDS2ChallengeAction
+      
   - name: Card Component
     children:
       - CardComponent
+      - BCMCComponent
       - CardDetails
-      - CardEncryptor
       - CardType
+      - CardBrand
       - CardExpiryDateFormatter
       - CardExpiryDateValidator
       - CardSecurityCodeFormatter
@@ -29,156 +91,127 @@ custom_categories:
       - CardNumberValidator
       - CardComponentDelegate
       - StoredCardConfiguration
-      - CardBrand
-  - name: Qiwi Wallet Component
-    children:
-      - QiwiWalletComponent
-      - QiwiWalletDetails
-      - QiwiWalletPaymentMethod
-  - name: MB Way Component
-    children:
-      - MBWayComponent
-      - MBWayDetails
-      - MBWayPaymentMethod
-  - name: BLIK Component
-    children:
-      - BLIKComponent
-      - BLIKDetails
-      - BLIKPaymentMethod
-      - StoredBLIKPaymentMethod
-  - name: Await Action Component
-    children:
-      - AwaitComponent
-      - AwaitActionDetails
-      - AwaitPaymentMethod
-  - name: Doku Component
-    children:
-      - DokuComponent
-      - DokuDetails
-      - DokuPaymentMethod
-  - name: EContext ATM Component
-    children:
-      - EContextATMComponent
-      - EContextATMPaymentMethod
-  - name: EContext Online Component
-    children:
-      - EContextOnlineComponent
-      - EContextOnlinePaymentMethod
-  - name: EContext Store Component
-    children:
-      - EContextStoreComponent
-      - EContextStoresPaymentMethod
-  - name: Seven Eleven Component
-    children:
-      - SevenElevenComponent
-      - SevenElevenPaymentMethod
-  - name: Voucher Action Component
-    children:
-      - VoucherComponent
-      - VoucherAction
-      - VoucherPaymentMethod
-  - name: QR Code Component
-    children:
-      - QRCodeComponent
-      - QRCodeAction
-      - QRCodePaymentMethod
-  - name: WeChat Pay
-    children:
-      - WeChatPaySDKActionComponent
-      - WeChatPayPaymentMethod
-      - WeChatPaySDKAction
-      - WeChatPaySDKData
-  - name: 3D Secure 2 Component
-    children:
-      - ThreeDS2Component
-      - ThreeDS2ComponentError
-      - ThreeDS2Details
+      
   - name: Apple Pay Component
     children:
+      - ApplePayPaymentMethod
       - ApplePayComponent
       - ApplePayDetails
-  - name: BCMC Component
+      
+  - name: Qiwi Wallet Component
     children:
-      - BCMCComponent
+      - QiwiWalletPaymentMethod
+      - QiwiWalletComponent
+      - QiwiWalletDetails
+      
+  - name: MB Way Component
+    children:
+      - MBWayPaymentMethod
+      - MBWayComponent
+      - MBWayDetails
+      
+  - name: BLIK Component
+    children:
+      - BLIKPaymentMethod
+      - StoredBLIKPaymentMethod
+      - BLIKComponent
+      - BLIKDetails
+      
+  - name: Doku Component
+    children:
+      - DokuPaymentMethod
+      - DokuComponent
+      - DokuDetails
+      
+  - name: PIX Component
+    children:
+      - PixComponent
+      - DokuDetails
+      
   - name: SEPA Direct Debit Component
     children:
       - SEPADirectDebitComponent
       - SEPADirectDebitDetails
       - IBANFormatter
       - IBANValidator
+      
+  - name: WeChat Pay
+    children:
+      - WeChatPaySDKData
+      - WeChatPayPaymentMethod
+      - WeChatPaySDKActionComponent
+      - WeChatPaySDKAction
+      
   - name: Issuer List Component
     children:
       - IssuerListComponent
-      - IssuerListDetails
       - IdealComponent
-      - IdealDetails
       - MOLPayComponent
-      - MOLPayDetails
       - DotpayComponent
-      - DotpayDetails
       - EPSComponent
-      - EPSDetails
       - EntercashComponent
-      - EntercashDetails
       - OpenBankingComponent
+      - EntercashDetails
       - OpenBankingDetails
-  - name: Adyen Action Component
+      - EPSDetails
+      - DotpayDetails
+      - MOLPayDetails
+      - IdealDetails
+      - IssuerListDetails
+      
+  - name: EContext Components
     children:
-      - AdyenActionComponent
-  - name: Redirect Component
+      - EContextATMComponent
+      - EContextOnlineComponent
+      - EContextStoreComponent
+      
+  - name: Seven Eleven Component
     children:
-      - RedirectComponent
+      - SevenElevenComponent
+      
+  - name: Payment Details
+    children:
+      - Details
+      - PaymentMethodDetails
       - RedirectDetails
+      - AdditionalDetails
+      - AwaitActionDetails
+      - EntercashDetails
+      - OpenBankingDetails
+      - EPSDetails
+      - DotpayDetails
+      - MOLPayDetails
+      - IdealDetails
+      - IssuerListDetails
+      - SEPADirectDebitDetails
+      - DokuDetails
+      - BLIKDetails
+      - QiwiWalletDetails
+      - ApplePayDetails
+      - ThreeDS2Details
+      
   - name: Base Component
     children:
       - Component
       - PaymentComponent
+      - PresentableComponent
       - FinalizableComponent
       - PaymentAwareComponent
       - TrackableComponent
-      - PaymentComponentData
       - PaymentComponentDelegate
       - PresentationDelegate
       - PartialPaymentDelegate
       - PartialPaymentComponent
       - ActionComponent
-      - ActionComponentData
-      - ActionComponentDelegate
-      - PresentableComponent
-      - Details
-      - PaymentOrder
-      - PaymentMethodDetails
-      - AdditionalDetails
-      - ComponentError
-      - SecuredViewController
-      - Localizable
+      - VoucherComponent
+      - BasicPersonalInfoFormComponent
+      
   - name: Models
     children:
-      - PaymentMethods
-      - PaymentMethod
-      - StoredPaymentMethod
-      - StoredCardPaymentMethod
-      - StoredBCMCPaymentMethod
-      - StoredPayPalPaymentMethod
-      - StoredBLIKPaymentMethod
-      - AnyCardPaymentMethod
-      - CardPaymentMethod
-      - IssuerListPaymentMethod
-      - ApplePayPaymentMethod
-      - BCMCPaymentMethod
-      - SEPADirectDebitPaymentMethod
       - ShopperInteraction
       - DisplayInformation
+      - PaymentComponentData
       - Payment
-      - Action
-      - RedirectAction
-      - GenericVoucherAction
-      - ThreeDS2Action
-      - SDKAction
-      - ThreeDS2FingerprintAction
-      - ThreeDS2ChallengeAction
-      - AwaitAction
-      - QRCodeAction
       - CardFundingSource
       - BrowserInfo
       - ShopperName
@@ -186,6 +219,8 @@ custom_categories:
       - ShopperInformation
       - BillingAddressInformation
       - LocalizationParameters
+      - PaymentOrder
+      
   - name: Styling
     children:
       - FormComponentStyle
@@ -211,7 +246,14 @@ custom_categories:
       - TintableStyle
       - ProgressViewStyle
       - CornerRounding
-  - name: Other
+      
+  - name: Encryption
+    children:
+      - CardEncryptor
+      - Card
+      - EncryptedCard
+      
+  - name: Utilities
     children:
       - AdyenLogging
       - Formatter
@@ -219,8 +261,6 @@ custom_categories:
       - LengthValidator
       - Environment
       - LogoURLProvider
-  - name: Encryption
-    children:
-      - CardEncryptor
-      - Card
-      - EncryptedCard
+      - ComponentError
+      - SecuredViewController
+      - Localizable
