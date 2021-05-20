@@ -2659,7 +2659,7 @@
 			children = (
 				5A64570D2625CB02001824F0 /* QR Code */,
 				F97C851425C1928500D7F85C /* Voucher */,
-				F9639B1A24DAD3150073F38A /* Await View Controller */,
+				F9639B1A24DAD3150073F38A /* Await */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -3026,14 +3026,14 @@
 			path = Await;
 			sourceTree = "<group>";
 		};
-		F9639B1A24DAD3150073F38A /* Await View Controller */ = {
+		F9639B1A24DAD3150073F38A /* Await */ = {
 			isa = PBXGroup;
 			children = (
 				F9639B1B24DAD3380073F38A /* AwaitViewController.swift */,
 				F9639B2524DD3DA30073F38A /* AwaitView.swift */,
 				F9639B1D24DADC300073F38A /* AwaitComponentViewModel.swift */,
 			);
-			path = "Await View Controller";
+			path = Await;
 			sourceTree = "<group>";
 		};
 		F9639B2724DD69D60073F38A /* APIClient */ = {

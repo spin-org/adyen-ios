@@ -1,33 +1,6 @@
 {
   "warnings": [
-    {
-      "file": "/Users/vm/source/adyen-ios/AdyenComponents/7 Eleven/SevenElevenComponent.swift",
-      "line": 11,
-      "symbol": "SevenElevenComponent",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/vm/source/adyen-ios/AdyenComponents/EContextATMComponent/EContextATMComponent.swift",
-      "line": 9,
-      "symbol": "EContextATMComponent",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/vm/source/adyen-ios/AdyenComponents/EContextOnlineComponent/EContextOnlineComponent.swift",
-      "line": 9,
-      "symbol": "EContextOnlineComponent",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/vm/source/adyen-ios/AdyenComponents/EContextStoreComponent/EContextStoreComponent.swift",
-      "line": 9,
-      "symbol": "EContextStoreComponent",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    }
+
   ],
   "source_directory": "/Users/vm/source/adyen-ios/TempProject/Pods"
 }
