@@ -38,7 +38,7 @@ public struct BalanceChecker {
 
         /// :nodoc:
         /// The remaining amount in the balance after payment. it is negative in case the `isBalanceEnough` is false.
-        public let remainingAmount: Payment.Amount
+        public let remainingAmount: Amount
     }
 
     /// :nodoc:
@@ -53,7 +53,7 @@ public struct BalanceChecker {
     /// - Throws: `Error.unexpectedCurrencyCode` in case there is inconsistencies regarding currency codes.
     /// - Returns: an instance of `BalanceValidator.Result`.
     /// :nodoc:
-    public func check(balance: Balance, isEnoughToPay amount: Payment.Amount) throws -> Result {
+    public func check(balance: Balance, isEnoughToPay amount: Amount) throws -> Result {
         guard balance.availableAmount.value > 0 else {
             throw Error.zeroBalance
         }
@@ -81,8 +81,8 @@ public struct BalanceChecker {
         return transactionLimit.currencyCode == balance.availableAmount.currencyCode
     }
 
-    private func calculateExpendableLimit(with balance: Balance) -> Payment.Amount {
-        let result: Payment.Amount
+    private func calculateExpendableLimit(with balance: Balance) -> Amount {
+        let result: Amount
         let availableAmount = balance.availableAmount
         if let balanceTransactionLimit = balance.transactionLimit {
             result = min(balanceTransactionLimit, availableAmount)
@@ -94,6 +94,6 @@ public struct BalanceChecker {
 }
 
 /// :nodoc:
-private func - (lhs: Payment.Amount, rhs: Payment.Amount) -> Payment.Amount {
-    Payment.Amount(value: lhs.value - rhs.value, currencyCode: lhs.currencyCode)
+private func - (lhs: Amount, rhs: Amount) -> Amount {
+    Amount(value: lhs.value - rhs.value, currencyCode: lhs.currencyCode)
 }

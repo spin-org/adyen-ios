@@ -232,7 +232,7 @@ public final class GiftCardComponent: PartialPaymentComponent,
         }
     }
 
-    private func onReadyToPayFullAmount(remainingAmount: Payment.Amount) -> Result<Void, Swift.Error> {
+    private func onReadyToPayFullAmount(remainingAmount: Amount) -> Result<Void, Swift.Error> {
         AdyenAssertion.assert(message: "readyToSubmitComponentDelegate is nil",
                               condition: _isDropIn && readyToSubmitComponentDelegate == nil)
         stopLoading()
@@ -246,7 +246,7 @@ public final class GiftCardComponent: PartialPaymentComponent,
     }
 
     private func showConfirmation(delegate: ReadyToSubmitPaymentComponentDelegate,
-                                  remainingAmount: Payment.Amount) {
+                                  remainingAmount: Amount) {
         let paymentData = createPaymentData()
         let lastFourDigits = String(numberItem.value.suffix(4))
         let footnote = localizedString(.partialPaymentRemainingBalance,

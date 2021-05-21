@@ -68,10 +68,10 @@ public class GenericVoucherAction: Decodable {
     public let paymentMethodType: VoucherPaymentMethod
 
     /// The initial  amount.
-    public let initialAmount: Payment.Amount
+    public let initialAmount: Amount
 
     /// The totalAmount  amount.
-    public let totalAmount: Payment.Amount
+    public let totalAmount: Amount
 
     /// The payment reference.
     public let reference: String
@@ -89,8 +89,8 @@ public class GenericVoucherAction: Decodable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         paymentMethodType = try container.decode(VoucherPaymentMethod.self, forKey: .paymentMethodType)
-        initialAmount = try container.decode(Payment.Amount.self, forKey: .initialAmount)
-        totalAmount = try container.decode(Payment.Amount.self, forKey: .totalAmount)
+        initialAmount = try container.decode(Amount.self, forKey: .initialAmount)
+        totalAmount = try container.decode(Amount.self, forKey: .totalAmount)
         reference = try container.decode(String.self, forKey: .reference)
         merchantName = try container.decode(String.self, forKey: .merchantName)
         instructionsUrl = try container.decode(String.self, forKey: .instructionsUrl)
@@ -112,8 +112,8 @@ public class GenericVoucherAction: Decodable {
 
     /// :nodoc:
     internal init(paymentMethodType: VoucherPaymentMethod,
-                  initialAmount: Payment.Amount,
-                  totalAmount: Payment.Amount,
+                  initialAmount: Amount,
+                  totalAmount: Amount,
                   reference: String,
                   expiresAt: Date,
                   merchantName: String,
