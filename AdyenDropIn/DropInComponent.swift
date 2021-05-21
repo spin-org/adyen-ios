@@ -16,7 +16,30 @@ import Adyen
 #endif
 import UIKit
 
-/// A component that handles the entire flow of payment selection and payment details entry.
+/**
+
+ A component that handles the entire flow of payment selection and payment details entry.
+
+ ```swift
+var currentComponent: DropInComponent?
+
+func presentDropInComponent() {
+     let configuration = DropInComponent.PaymentMethodsConfiguration(clientKey: "YOUR CLIENT KEY")
+     configuration.payment = payment
+
+     let dropInComponentStyle = DropInComponent.Style()
+     let component = DropInComponent(paymentMethods: paymentMethods,
+                                     paymentMethodsConfiguration: configuration,
+                                     style: dropInComponentStyle,
+                                     title: "My Application")
+     component.delegate = self
+     component.environment = environment
+     currentComponent = component
+
+     self.present(viewController: component.viewController, animated: true)
+ }
+ ```
+ */
 public final class DropInComponent: NSObject, PresentableComponent {
 
     private let configuration: PaymentMethodsConfiguration
@@ -67,9 +90,7 @@ public final class DropInComponent: NSObject, PresentableComponent {
     // MARK: - Presentable Component Protocol
     
     /// :nodoc:
-    public var viewController: UIViewController {
-        navigationController
-    }
+    public var viewController: UIViewController { navigationController }
 
     // MARK: - Handling Actions
 
@@ -239,7 +260,6 @@ public final class DropInComponent: NSObject, PresentableComponent {
         paymentInProgress = false
     }
 
-    /// :nodoc:
     private func stopLoading() {
         rootComponent.stopLoading()
         selectedPaymentComponent?.stopLoadingIfNeeded()
