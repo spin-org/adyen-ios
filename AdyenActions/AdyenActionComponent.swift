@@ -33,7 +33,7 @@ public final class AdyenActionComponent: ActionComponent, Localizable {
     public var localizationParameters: LocalizationParameters?
     
     /// :nodoc:
-    public init() {}
+    public init() { /* public init */ }
     
     // MARK: - Performing Actions
     

@@ -26,6 +26,6 @@ public struct ListSectionHeaderStyle: ViewStyle {
     }
     
     /// Initializes the list header style with the default style.
-    public init() {}
+    public init() { /* public init */ }
     
 }

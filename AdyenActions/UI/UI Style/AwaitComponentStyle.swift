@@ -31,5 +31,5 @@ public struct AwaitComponentStyle: ViewStyle {
     public var backgroundColor = UIColor.Adyen.componentBackground
     
     /// Initializes the await component style with the default style.
-    public init() {}
+    public init() { /* public init */ }
 }

@@ -12,7 +12,7 @@ import Foundation
 public final class CardNumberValidator: Validator {
     
     /// :nodoc:
-    public init() {}
+    public init() { /* public init */ }
     
     /// :nodoc:
     public func isValid(_ value: String) -> Bool {

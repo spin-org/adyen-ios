@@ -33,5 +33,5 @@ public struct ListComponentStyle: ViewStyle {
     }
     
     /// Initializes the list component style with the default style.
-    public init() {}
+    public init() { /* public init */ }
 }

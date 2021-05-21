@@ -71,6 +71,6 @@ public struct FormTextItemStyle: FormValueItemStyle {
     }
     
     /// Initializes the text item's style with the default style.
-    public init() {}
+    public init() { /* public init */ }
     
 }

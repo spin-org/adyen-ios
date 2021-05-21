@@ -29,5 +29,5 @@ public struct FormErrorItemStyle: ViewStyle {
     }
 
     /// Initializes the form error item style with the default style.
-    public init() {}
+    public init() { /* public init */ }
 }

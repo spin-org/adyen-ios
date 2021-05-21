@@ -47,7 +47,7 @@ public struct ListItemStyle: ViewStyle {
     }
     
     /// Initializes the list item style with the default style.
-    public init() {}
+    public init() { /* public init */ }
     
 }
 

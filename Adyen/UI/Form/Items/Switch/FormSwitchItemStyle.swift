@@ -33,5 +33,5 @@ public struct FormSwitchItemStyle: FormValueItemStyle {
     }
     
     /// Initializes the form switch item style with the default style.
-    public init() {}
+    public init() { /* public init */ }
 }

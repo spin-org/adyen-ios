@@ -11,7 +11,7 @@ import Foundation
 public final class IBANValidator: Validator {
     
     /// :nodoc:
-    public init() {}
+    public init() { /* public init */ }
     
     /// :nodoc:
     public func isValid(_ value: String) -> Bool {

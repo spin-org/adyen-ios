@@ -45,7 +45,7 @@ public extension DropInComponent {
         }
         
         /// Initializes the instance of DropIn style with the default values.
-        public init() {}
+        public init() { /* public init */ }
         
         /// Initializes the instance of DropIn style with the default values.
         public init(tintColor: UIColor) {

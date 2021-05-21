@@ -62,6 +62,6 @@ public struct NavigationStyle: TintableStyle {
     public var toolbarMode = ToolbarMode.natural
     
     /// Initializes the navigation style.
-    public init() {}
+    public init() { /* public init */ }
     
 }

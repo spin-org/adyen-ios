@@ -36,5 +36,5 @@ public struct QRCodeComponentStyle: ViewStyle {
     public var backgroundColor = UIColor.Adyen.componentBackground
     
     /// Initializes the QR code component style with the default style
-    public init() {}
+    public init() { /* public init */ }
 }

@@ -10,7 +10,7 @@ import Foundation
 public final class IBANFormatter: Formatter {
     
     /// Initializes the IBAN formatter.
-    public init() {}
+    public init() { /* public init */ }
     
     /// :nodoc:
     public func formattedValue(for value: String) -> String {
