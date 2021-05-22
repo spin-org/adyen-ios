@@ -3,13 +3,13 @@ Pod::Spec.new do |s|
   s.version = '4.0.0'
   s.summary = "Adyen Components for iOS"
   s.description = <<-DESC
-    Adyen Components for iOS allows you to accept in-app payments by providing you with the building blocks you need to create a checkout experience.
+    Spin's customized Adyen Components for iOS allows you to accept in-app payments by providing you with the building blocks you need to create a checkout experience.
   DESC
 
   s.homepage = 'https://adyen.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Adyen' => 'support@adyen.com' }
-  s.source = { :git => 'https://github.com/Adyen/adyen-ios.git', :tag => "#{s.version}" }
+  s.source = { :git => 'git@github.com:spin-org/adyen-ios.git', :tag => "#{s.version}" }
   s.platform = :ios
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.1'

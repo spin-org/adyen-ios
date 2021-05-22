@@ -232,7 +232,6 @@
 		E97B970C2297ED0D00505476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97B970A2297ED0D00505476 /* LaunchScreen.storyboard */; };
 		E97B970D22980C7900505476 /* AdyenCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C0E05F220982AE008616F6 /* AdyenCard.framework */; };
 		E97B970E22980C8400505476 /* AdyenDropIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B36CAB2243B2FE00EAA368 /* AdyenDropIn.framework */; };
-		E97B971322980CBA00505476 /* Adyen3DS2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E226F5462296BE250013A463 /* Adyen3DS2.framework */; };
 		E97B971A229D54D600505476 /* ActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B9719229D54D600505476 /* ActionTests.swift */; };
 		E97B972322B238C400505476 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97B972222B238C400505476 /* Analytics.swift */; };
 		E9909FB422B7C816008DE50C /* PaymentMethods.json in Resources */ = {isa = PBXBuildFile; fileRef = E9909FB322B7C815008DE50C /* PaymentMethods.json */; };
@@ -902,7 +901,6 @@
 		E226F53B22969B530013A463 /* RedirectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedirectAction.swift; sourceTree = "<group>"; };
 		E226F53F22969B650013A463 /* ThreeDS2FingerprintAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDS2FingerprintAction.swift; sourceTree = "<group>"; };
 		E226F54122969B6C0013A463 /* ThreeDS2ChallengeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDS2ChallengeAction.swift; sourceTree = "<group>"; };
-		E226F5462296BE250013A463 /* Adyen3DS2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adyen3DS2.framework; path = Carthage/Build/iOS/Adyen3DS2.framework; sourceTree = "<group>"; };
 		E226F54A229803130013A463 /* DropInComponentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropInComponentDelegate.swift; sourceTree = "<group>"; };
 		E2289B3A23D04B57002844BF /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
 		E2289B3B23D0BBB1002844BF /* ListSectionHeaderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSectionHeaderStyle.swift; sourceTree = "<group>"; };
@@ -2065,7 +2063,6 @@
 				F9620DA723C74860005209FC /* libsqlite3.tbd */,
 				F9620DA523C74856005209FC /* CoreTelephony.framework */,
 				F9620DA323C7483B005209FC /* libc++.tbd */,
-				E226F5462296BE250013A463 /* Adyen3DS2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3529,6 +3526,8 @@
 			dependencies = (
 			);
 			name = Adyen;
+			packageProductDependencies = (
+			);
 			productName = Adyen;
 			productReference = E2C0E03322097917008616F6 /* Adyen.framework */;
 			productType = "com.apple.product-type.framework";
@@ -5073,6 +5072,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5138,6 +5138,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
