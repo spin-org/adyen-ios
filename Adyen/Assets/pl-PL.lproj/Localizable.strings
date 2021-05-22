@@ -122,3 +122,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "Osobny adres dostawy";
 "adyen.voucher.shopperReference" = "Dane referencyjne kupujących";
 "adyen.voucher.alternativeReference" = "Dodatkowy numer referencyjny";
+"spin.add_card" = "Add Card";
+"spin.payment_authorize" = "I authorize Spin to take payments from the financial institution that issued my card in accordance with the terms of my agreement with Spin Terms.";
+"spin.spin_terms" = "Spin Terms";

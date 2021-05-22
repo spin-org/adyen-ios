@@ -122,3 +122,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "单独的送货地址";
 "adyen.voucher.shopperReference" = "顾客参考";
 "adyen.voucher.alternativeReference" = "备选代码";
+"spin.add_card" = "添加卡片";
+"spin.payment_authorize" = "本人授权 Spin 根据本人同意的Spin 条款，通过本人卡片的发卡金融机构接收付款。";
+"spin.spin_terms" = "Spin 条款";

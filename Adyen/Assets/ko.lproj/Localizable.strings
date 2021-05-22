@@ -122,3 +122,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "별도의 배송 주소";
 "adyen.voucher.shopperReference" = "구매자 참조번호";
 "adyen.voucher.alternativeReference" = "대체 참조번호";
+"spin.add_card" = "카드 추가";
+"spin.payment_authorize" = "Spin 약관에 대한 계약 조건에 따라 Spin이 본 계약의 조항에 의거해 카드를 발급한 금융 기관에서 지불하는 것을 승인합니다.";
+"spin.spin_terms" = "Spin 약관";

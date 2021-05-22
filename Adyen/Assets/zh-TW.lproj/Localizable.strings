@@ -119,3 +119,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "單獨派送地址";
 "adyen.voucher.shopperReference" = "購物者參考";
 "adyen.voucher.alternativeReference" = "備選參照";
+"spin.add_card" = "新增卡片";
+"spin.payment_authorize" = "我授權 Spin 依照 Spin 條款，向我的發卡金融機構收取款項。";
+"spin.spin_terms" = "Spin 條款";

@@ -122,3 +122,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "Доставить по другому адресу";
 "adyen.voucher.shopperReference" = "Идентификатор покупателя";
 "adyen.voucher.alternativeReference" = "Другой код";
+"spin.add_card" = "Добавить карту";
+"spin.payment_authorize" = "Я разрешаю компании Spin принимать платежи от финансового учреждения, выпустившего мою платежную карту, в соответствии с положениями моего соглашения с Условиями Spin.";
+"spin.spin_terms" = "Условиями Spin";

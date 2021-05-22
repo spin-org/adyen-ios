@@ -122,3 +122,6 @@
 "adyen.affirm.deliveryAddressToggle.title" = "Avvikende leveringsadresse";
 "adyen.voucher.shopperReference" = "Kundereferanse";
 "adyen.voucher.alternativeReference" = "Alternativ referanse";
+"spin.add_card" = "Add Card";
+"spin.payment_authorize" = "I authorize Spin to take payments from the financial institution that issued my card in accordance with the terms of my agreement with Spin Terms.";
+"spin.spin_terms" = "Spin Terms";
