@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "无效的电话号码";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ 位数";
+"spin.add_card" = "添加卡片";

@@ -1,20 +1,22 @@
 Pod::Spec.new do |s|
   s.name = 'Adyen'
-  s.version = '3.6.0'
-  s.summary = "Adyen Components for iOS"
+  s.version = '3.6.1'
+  s.summary = "Spin's Adyen Components for iOS"
   s.description = <<-DESC
-    Adyen Components for iOS allows you to accept in-app payments by providing you with the building blocks you need to create a checkout experience.
+    Spin's customized Adyen Components for iOS allows you to accept in-app payments by providing you with the building blocks you need to create a checkout experience.
   DESC
 
   s.homepage = 'https://adyen.com'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.author = { 'Adyen' => 'support@adyen.com' }
-  s.source = { :git => 'https://github.com/Adyen/adyen-ios.git', :tag => "#{s.version}" }
+  s.source = { :git => 'git@github.com:spin-org/adyen-ios.git', :tag => "#{s.version}" }
   s.platform = :ios
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.1'
   s.frameworks = 'Foundation'
   s.default_subspecs = 'Core', 'Card', 'DropIn'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'SWIFT_SUPPRESS_WARNINGS' => 'YES' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   s.subspec 'Core' do |plugin|
     plugin.source_files = 'Adyen/**/*.swift'
@@ -45,7 +47,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Card' do |plugin|
     plugin.dependency 'Adyen/Core'
-    plugin.dependency 'Adyen3DS2', '>= 2.1.0-rc.5'
+    plugin.dependency 'Adyen3DS2','2.2.2'
     plugin.source_files = 'AdyenCard/**/*.swift', 'AdyenCard/Utilities/AdyenCSE/*.{h,m}', 'AdyenCard/Utilities/*.{h,m}'
     plugin.private_header_files = 'AdyenCard/Utilities/AdyenCSE/*.h'
   end

@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "無効な電話番号";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@桁";
+"spin.add_card" = "Add Card";

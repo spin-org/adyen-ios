@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "Ei-kelvollinen puhelinnumero";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ lukua";
+"spin.add_card" = "Add Card";

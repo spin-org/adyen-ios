@@ -73,6 +73,7 @@ internal final class APIClient: APIClientProtocol {
             return
         }
         
+        print(" ---- Request URL (\(url.absoluteURL)) ----")
         print(" ---- Request (/\(request.path)) ----")
         printAsJSON(body)
         
@@ -82,9 +83,10 @@ internal final class APIClient: APIClientProtocol {
         
         urlRequest.allHTTPHeaderFields = [
             "Content-Type": "application/json",
-            "x-demo-server-api-key": Configuration.demoServerAPIKey
+            "X-API-Key": Configuration.demoServerAPIKey
         ]
         
+        print(" ---- Request Headers (/\(urlRequest.allHTTPHeaderFields)) ----")
         requestCounter += 1
         
         urlSession.adyen.dataTask(with: urlRequest) { [weak self] result in

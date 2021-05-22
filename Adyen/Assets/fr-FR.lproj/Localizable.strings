@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "Numéro de téléphone incorrect";
 "adyen.phoneNumber.placeholder" = "01 23 45 67 89";
 "adyen.card.cvcItem.placeholder.digits" = "%@ chiffres";
+"spin.add_card" = "Ajouter une carte";

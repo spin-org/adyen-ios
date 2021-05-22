@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "유효하지 않은 전화번호";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@자리";
+"spin.add_card" = "카드 추가";

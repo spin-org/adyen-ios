@@ -87,11 +87,7 @@ private func attempt(_ input: LocalizationInput) -> String? {
 /// - Parameter amount: The amount to include in the submit button title.
 /// - Parameter parameters: The localization parameters.
 public func ADYLocalizedSubmitButtonTitle(with amount: Payment.Amount?, _ parameters: LocalizationParameters?) -> String {
-    guard let formattedAmount = amount?.formatted else {
-        return ADYLocalizedString("adyen.submitButton", parameters)
-    }
-    
-    return ADYLocalizedString("adyen.submitButton.formatted", parameters, formattedAmount)
+    return ADYLocalizedString("spin.add_card", parameters)
 }
 
 internal extension Bundle {

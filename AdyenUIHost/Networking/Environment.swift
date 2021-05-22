@@ -13,9 +13,9 @@ internal enum DemoServerEnvironment {
     internal var url: URL {
         switch self {
         case .beta:
-            return URL(string: "https://checkoutshopper-beta.adyen.com/checkoutshopper/demoserver/")!
+            return URL(string: "https://checkout-beta.adyen.com/checkout/v53")!
         case .test:
-            return URL(string: "https://checkoutshopper-test.adyen.com/checkoutshopper/demoserver/")!
+            return URL(string: "https://checkout-test.adyen.com/v53")!
         }
     }
 }

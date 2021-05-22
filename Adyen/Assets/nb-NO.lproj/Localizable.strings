@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "Ugyldig telefonnummer";
 "adyen.phoneNumber.placeholder" = "987 65 432";
 "adyen.card.cvcItem.placeholder.digits" = "%@ siffer";
+"spin.add_card" = "Add Card";

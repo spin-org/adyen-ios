@@ -36,3 +36,4 @@
 "adyen.phoneNumber.invalid" = "Недействительный номер телефона";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ цифры";
+"spin.add_card" = "Добавить карту";
