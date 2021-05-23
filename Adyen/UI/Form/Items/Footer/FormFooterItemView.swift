@@ -23,7 +23,7 @@ internal final class FormFooterItemView: FormItemView<FormFooterItem>, Observer 
         backgroundColor = item.style.backgroundColor
         
         bind(item.$showsActivityIndicator, to: submitButton, at: \.showsActivityIndicator)
-        
+        bind(item.$isDisabled, to: submitButton, at: \.isDisabled)
         configureConstraints()
     }
     

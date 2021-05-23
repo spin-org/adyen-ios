@@ -35,6 +35,8 @@ public final class CardComponent: PaymentComponent, PresentableComponent, Locali
     /// The delegate for user activity on card component.
     public weak var cardComponentDelegate: CardComponentDelegate?
     
+    public weak var switchDelegate: FormValueItemViewDelegate?
+    
     /// The supported card types.
     /// The getter is O(n), since it filters out all the `excludedCardTypes` before returning.
     public var supportedCardTypes: [CardType] {
@@ -164,6 +166,10 @@ public final class CardComponent: PaymentComponent, PresentableComponent, Locali
         }
     }
     
+    private func didToggleSwitch(value: Bool) {
+        self.footerItem.isDisabled = !value
+    }
+    
     // MARK: - Stored Card
     
     private lazy var storedCardAlertManager: StoredCardAlertManager? = {
@@ -283,9 +289,12 @@ public final class CardComponent: PaymentComponent, PresentableComponent, Locali
     
     internal lazy var storeDetailsItem: FormSwitchItem = {
         let storeDetailsItem = FormSwitchItem(style: style.switch)
-        storeDetailsItem.title = ADYLocalizedString("adyen.card.storeDetailsButton", localizationParameters)
+        observe(storeDetailsItem.$switchValue) { [weak self] value in
+            guard let self = self else { return }
+            self.didToggleSwitch(value: value)
+        }
+        storeDetailsItem.title = ADYLocalizedString("spin.payment_authorize", localizationParameters)
         storeDetailsItem.identifier = ViewIdentifierBuilder.build(scopeInstance: self, postfix: "storeDetailsItem")
-        
         return storeDetailsItem
     }()
     
@@ -295,6 +304,9 @@ public final class CardComponent: PaymentComponent, PresentableComponent, Locali
         footerItem.identifier = ViewIdentifierBuilder.build(scopeInstance: self, postfix: "footer")
         footerItem.submitButtonSelectionHandler = { [weak self] in
             self?.didSelectSubmitButton()
+        }
+        if self.showsStorePaymentMethodField == true {
+            footerItem.isDisabled = true
         }
         return footerItem
     }()
@@ -314,3 +326,4 @@ public extension CardComponent {
         }
     }
 }
+

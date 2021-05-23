@@ -25,6 +25,8 @@ public final class FormFooterItem: FormItem {
     /// The observable of the button indicator activity.
     @Observable(false) public var showsActivityIndicator: Bool
     
+    @Observable(false) public var isDisabled: Bool
+    
     /// A closure that will be invoked when the submit button is selected.
     public var submitButtonSelectionHandler: (() -> Void)?
     
