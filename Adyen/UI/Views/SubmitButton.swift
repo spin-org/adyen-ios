@@ -76,6 +76,24 @@ public final class SubmitButton: UIControl {
         }
     }
     
+    public var isDisabled: Bool {
+        get {
+            return !isEnabled
+        }
+        
+        set {
+            if newValue {
+                isHighlighted = true
+                titleLabel.alpha = 0.2
+                isEnabled = false
+            } else {
+                isHighlighted = false
+                titleLabel.alpha = 1.0
+                isEnabled = true
+            }
+        }
+    }
+    
     // MARK: - Activity Indicator View
     
     /// Boolean value indicating whether an activity indicator should be shown.
