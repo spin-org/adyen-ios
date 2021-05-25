@@ -306,7 +306,7 @@ public final class CardComponent: PaymentComponent, PresentableComponent, Locali
             self?.didSelectSubmitButton()
         }
         if self.showsStorePaymentMethodField == true {
-            footerItem.isDisabled = true
+            footerItem.isDisabled = false
         }
         return footerItem
     }()

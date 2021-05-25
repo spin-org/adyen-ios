@@ -93,6 +93,7 @@ public final class FormSwitchItem: FormSwitchItemProtocol {
     /// - Parameter style: The switch item style.
     public init(style: FormSwitchItemStyle = FormSwitchItemStyle()) {
         self.style = style
+        self.value = true
     }
     
     public func valueDidChange() {
