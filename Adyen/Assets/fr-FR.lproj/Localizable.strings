@@ -37,3 +37,5 @@
 "adyen.phoneNumber.placeholder" = "01 23 45 67 89";
 "adyen.card.cvcItem.placeholder.digits" = "%@ chiffres";
 "spin.add_card" = "Ajouter une carte";
+"spin.payment_authorize" = "J’autorise Spin à prélever des paiements auprès de l’institution financière qui a émis ma carte conformément aux modalités de mon acceptation des conditions générales de Spin.";
+"spin.spin_terms" = "conditions générales de Spin";

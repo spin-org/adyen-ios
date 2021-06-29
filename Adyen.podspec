@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Adyen'
-  s.version = '3.6.2'
+  s.version = '3.6.3'
   s.summary = "Spin's Adyen Components for iOS"
   s.description = <<-DESC
     Spin's customized Adyen Components for iOS allows you to accept in-app payments by providing you with the building blocks you need to create a checkout experience.

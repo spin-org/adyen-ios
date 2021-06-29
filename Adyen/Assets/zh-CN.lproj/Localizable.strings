@@ -37,3 +37,5 @@
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ 位数";
 "spin.add_card" = "添加卡片";
+"spin.payment_authorize" = "本人授权 Spin 根据本人同意的Spin 条款，通过本人卡片的发卡金融机构接收付款。";
+"spin.spin_terms" = "Spin 条款";

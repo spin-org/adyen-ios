@@ -37,3 +37,5 @@
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ dígitos";
 "spin.add_card" = "Añadir tarjeta";
+"spin.payment_authorize" = "Autorizo a Spin a recibir pagos de la entidad financiera emisora de mi tarjeta de acuerdo con los términos de mi contrato con Términos de Spin";
+"spin.spin_terms" = "Términos de Spin";

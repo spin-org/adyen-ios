@@ -36,4 +36,6 @@
 "adyen.phoneNumber.invalid" = "電話號碼無效";
 "adyen.phoneNumber.placeholder" = "123–456–789";
 "adyen.card.cvcItem.placeholder.digits" = "%@ 位數";
-"spin.add_card" = "Add Card";
+"spin.add_card" = "新增卡片";
+"spin.payment_authorize" = "我授權 Spin 依照 Spin 條款，向我的發卡金融機構收取款項。";
+"spin.spin_terms" = "Spin 條款";
