@@ -132,10 +132,14 @@ public final class APIClient: APIClientProtocol {
     
     /// :nodoc:
     private var requestCounter = 0 {
-        didSet {
-            let application = UIApplication.shared
-            application.isNetworkActivityIndicatorVisible = self.requestCounter > 0
-        }
+		didSet {
+			let isVisible = self.requestCounter > 0
+			
+			DispatchQueue.main.async {
+				// this must run on the main thread because it affects UI and all UI must run on the main thread
+				UIApplication.shared.isNetworkActivityIndicatorVisible = isVisible
+			}
+		}
     }
     
 }
