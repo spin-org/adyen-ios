@@ -5,7 +5,6 @@
 //
 
 import UIKit
-import os
 
 /// A view representing a switch item.
 /// :nodoc:
@@ -22,12 +21,9 @@ public final class FormToggleItemView: FormValueItemView<Bool, FormToggleItemSty
 			if let string = item.title, string == localizedString(.payment_authorize, nil) {
 				titleLabel.touchHandler = { textCheckingResult in
 					guard let url = textCheckingResult.url else {
-						if #available(iOS 14.0, *) {
-							Logger().error("No url for label: \(titleLabel)")
-						}
-						
-						return
-					}
+                        adyenPrint("No url for label: \(titleLabel)")
+                        return
+                    }
 					
 					UIApplication.shared.open(url)
 				}
