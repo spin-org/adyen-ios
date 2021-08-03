@@ -31,12 +31,12 @@ internal enum ConfigurationConstants {
     
     static let apiContext = APIContext(environment: componentsEnvironment, clientKey: clientKey)
     
-    static let clientKey = "test_I7ABUXA66FCC5OG3FNVMKPVYDIXSYTLR"
+    static let clientKey = "{YOUR_CLIENT_KEY}"
 
     // swiftlint:disable:next line_length
-    static let demoServerAPIKey = "AQEphmfuXNWTK0Qc+iSDgm02hueYR55DGcMTDWlE1rNRjS1UduCj/CcjoG4QwV1bDb7kfNy1WIxIIkxgBw==-HVMl6ri9a3R23e5A3zeRll3j3ztqGuuDu290HGCqqsw=-p5)54AtT#@d9_8PU"
+    static let demoServerAPIKey = "{YOUR_DEMO_SERVER_API_KEY}"
 
-	static let applePayMerchantIdentifier = "merchant.pm.spin"
+    static let applePayMerchantIdentifier = "{YOUR_APPLE_PAY_MERCHANT_IDENTIFIER}"
 
     static let merchantAccount = "{YOUR_MERCHANT_ACCOUNT}"
     
