@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import os
 
 /// A view representing a switch item.
 /// :nodoc:
@@ -13,19 +14,52 @@ public final class FormToggleItemView: FormValueItemView<Bool, FormToggleItemSty
     /// Initializes the switch item view.
     ///
     /// - Parameter item: The item represented by the view.
-    public required init(item: FormToggleItem) {
-        super.init(item: item)
-        
-        showsSeparator = false
-        
-        isAccessibilityElement = true
-        accessibilityLabel = item.title
-        accessibilityTraits = switchControl.accessibilityTraits
-        accessibilityValue = switchControl.accessibilityValue
-        
-        addSubview(stackView)
-        stackView.adyen.anchor(inside: self.layoutMarginsGuide)
-    }
+	public required init(item: FormToggleItem) {
+		super.init(item: item)
+		titleLabel = {
+			let titleLabel = TextCheckingLabel(style: item.style.title)
+		 
+			if let string = item.title, string == localizedString(.payment_authorize, nil) {
+				titleLabel.touchHandler = { textCheckingResult in
+					guard let url = textCheckingResult.url else {
+						if #available(iOS 14.0, *) {
+							Logger().error("No url for label: \(titleLabel)")
+						}
+						
+						return
+					}
+					
+					UIApplication.shared.open(url)
+				}
+				titleLabel.attributedText = {
+					let mas = NSMutableAttributedString(string: string)
+					let range = mas.mutableString.range(of: localizedString(.spin_terms, nil))
+					
+					mas.addAttributes([.link: URL(string: "https://www.spin.pm/legal?tab=terms#terms-tab")!, .underlineStyle: NSUnderlineStyle.single.rawValue], range: range)
+					return mas
+				}()
+				titleLabel.usesGestureRecognizer = true
+			} else {
+				titleLabel.text = item.title
+			}
+		
+			titleLabel.numberOfLines = 0
+			titleLabel.isAccessibilityElement = false
+			titleLabel.accessibilityIdentifier = item.identifier.map { ViewIdentifierBuilder.build(scopeInstance: $0, postfix: "titleLabel") }
+
+			return titleLabel
+		}()
+		
+		showsSeparator = false
+		
+		isAccessibilityElement = true
+		accessibilityLabel = item.title
+		accessibilityTraits = switchControl.accessibilityTraits
+		accessibilityValue = switchControl.accessibilityValue
+		
+		addSubview(stackView)
+		stackView.adyen.anchor(inside: self.layoutMarginsGuide)
+	}
     
     // MARK: - Switch Control
     
