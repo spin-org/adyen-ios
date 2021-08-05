@@ -228,11 +228,6 @@ internal class CardViewController: FormViewController {
             self?.cardDelegate?.didSelectSubmitButton()
         }
 		
-		// is this necessary?
-		if !configuration.showsStorePaymentMethodField {
-			item.enabled = false
-		}
-		
         return item
     }()
 
