@@ -17,6 +17,14 @@ Pod::Spec.new do |s|
   s.default_subspecs = 'Core', 'Components', 'Actions', 'Card', 'Encryption', 'DropIn'
   s.pod_target_xcconfig = {'SWIFT_SUPPRESS_WARNINGS' => 'YES' }
 
+  s.subspec 'ApplePay' do |plugin|
+    plugin.source_files = [
+      'AdyenComponents/Apple Pay/*.swift',
+      'Adyen/**/*.swift'
+    ]
+    plugin.exclude_files = 'Adyen/**/BundleSPMExtension.swift'
+  end
+
   s.subspec 'DropIn' do |plugin|
     plugin.source_files = 'AdyenDropIn/**/*.swift'
     plugin.dependency 'Adyen/Core'
