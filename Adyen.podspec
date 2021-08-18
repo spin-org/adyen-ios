@@ -18,6 +18,14 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'SWIFT_SUPPRESS_WARNINGS' => 'YES' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
+  s.subspec 'ApplePay' do |plugin|
+    plugin.source_files = [
+      'AdyenComponents/Apple Pay/*.swift',
+      'Adyen/**/*.swift'
+    ]
+    plugin.exclude_files = 'Adyen/**/BundleSPMExtension.swift'
+  end
+
   s.subspec 'DropIn' do |plugin|
     plugin.source_files = 'AdyenDropIn/**/*.swift'
     plugin.dependency 'Adyen/Core'
